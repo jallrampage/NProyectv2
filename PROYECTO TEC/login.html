@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,65 +9,68 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="loginCSS.css" />
+    <script src="registro.php"></script>
+
     <title>Login</title>
   </head>
   <body>
+
     <div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form action="logeo.php" class="sign-in-form" method="post">
             <img class="logoTEC" src="fotos/TECNMorelia.png" alt="">
             <h2 class="title">Bienvenido</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Nombre de usuario" />
+              <input name="correo" id="correo" type="text" placeholder="Correo Electronico" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Contraseña" />
+              <input name ="password"id="password" type="password" placeholder="Contraseña" />
             </div>
-            <input href="principal.html" type="submit" value="Login" class="btn" />
+         <!--   <input type="submit" value="Login" class="btn" />-->
+            <button href="#" class="btn" value="Login">Login</button>
            
           </form>
-          <form action="#" class="sign-up-form">
+          <form action="registro.php" class="sign-up-form" method="post" id="formulario-registro">
             <h2 class="title">Registrate</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Nombre completo" />
+              <input name="nombre"type="text" placeholder="Nombre" />
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Apellido Paterno" />
+              <input name="apellidoP" type="text" placeholder="Apellido Paterno" />
             </div>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Apellido Materno" />
+              <input name="apellidoM" type="text" placeholder="Apellido Materno" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Correo institucional" />
+              <input name="email" type="email" placeholder="Correo institucional" />
             </div>
             <div class="input-field">
               <i ></i>
-              <input type="text" placeholder="Ingrese RFC" />
+              <input name="rfc" type="text" placeholder="Ingrese RFC" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Contraseña" />
+              <input name="contra" type="password" placeholder="Contraseña" />
             </div>
 
             
             <p for="roles" >Selecciona el tipo de usuario:</p>
             <select id="rol" name="roles" class="rols input-field" >
-              <option class="rolink" value="jefe">Usuario Jefe</option>
-              <option class="rolink" value="saab">Usuario Personal</option>
+              <option id="tipo_usuario"class="rolink" value="2">Usuario Jefe</option>
+              <option class="rolink" value="1">Usuario Personal</option>
             </select>
 
             <!-- <input href="#" type="submit" class="btn" value="Registrar" /> -->
-            <button href="principal.html" class="btn" value="Registrar">
-             Registrate
-            </button>
-            
+            <button  href="#" type="submit" class="btn" value="Registrar">Registrate</button>
+          
+
             
           </form>
         </div>
